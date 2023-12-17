@@ -36,5 +36,5 @@ system1 = login('Cisco Portal')
 system1.login()
 time.sleep(2)
 
-system2 = login('Palo Alto Portal')
+system2 = login('Huawei Portal')
 system2.login()
