@@ -25,6 +25,7 @@ class login:
             print(f'User ID: {query_id} is exist, Username is {self.username}')
 
     def login(self):
+        self._get_account()
         for user_id in self.database:
             if self.database[user_id]['username'] == self.username:
                 if self.database[user_id]['password'] == self.password:
