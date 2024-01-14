@@ -4,10 +4,10 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 
 class INFLUX:
     def __init__(self):
-        self.token = "J2m97MyArgSP_jq75aNpriwC14Z2rR27nCu1XjyfyoGa0sz8itO8hVzWfqG306BrD0FNhmuUZOYeeSA5j--bhQ=="
-        self.org = "soc"
-        self.bucket = "soc"
-        self.influx_server = "http://192.168.88.150:8086"
+        self.token = "noTJY-a4xdFxn-P_WJmmhT9BA-Pvue4Q9Xi_qQwfKgWuPCtVYS3qAEz6xQnec2uYrHMW8xj39Jk6pOhB-AVDuA=="
+        self.org = "test"
+        self.bucket = "core"
+        self.influx_server = "http://172.16.130.22:8086"
         self.client = influxdb_client.InfluxDBClient(url=self.influx_server, token=self.token, org=self.org)
         self.api_writer = self.client.write_api(write_options=SYNCHRONOUS)
         self.api_query = self.client.query_api()
