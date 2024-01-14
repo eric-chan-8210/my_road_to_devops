@@ -25,7 +25,7 @@ class ZABBIX:
                 mon_data = self.zapi.item.get(itemids=list(item_dict.keys()))
                 item_name = mon_data[i]['name']
                 item_value = mon_data[i]['lastvalue']
-                self.influx.write('Local' + device_name, [item_name, float(item_value)])
+                self.influx.write('Local_' + device_name, [item_name, float(item_value)])
     
     def close(self):
         self.zapi.user.logout()
